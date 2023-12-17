@@ -26,7 +26,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <Load />
+      {/* <Load /> */}
       {ao ? (
         <div className="container">
           <Home aove={ao} setProps={setprops} />

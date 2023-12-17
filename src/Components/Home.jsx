@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/SendIcon';
 
 
 export default function Home(props) {
@@ -48,13 +46,12 @@ export default function Home(props) {
   const handleChange = (e) => {
     setUserName(e.currentTarget.value);
   };
-  const handleMdpChange = (e) => {
-    setMdp(e.currentTarget.value);
-  };
+
   const onSingnin = (e) => {
     e.preventDefault();
     const name = "Lucasrakoto";
     const pswd = "1234";
+    const mdp = "1234";
     if (username === name && mdp === pswd) {
       setIsLoggedIn(true);
       toast.success("Welcome, you are connected !", {
@@ -100,18 +97,22 @@ export default function Home(props) {
       {/* section navbar */}
       <nav>
         <ul className="navbar">
-          <li>
-            <a href="#_Home">Home</a>
-          </li>
-          <li>
-            <a href="#_About">Settings</a>
-          </li>
+
 
           {isLoggedIn && (
-            <li>
-              <button onClick={changeAo}>Dashboard</button>
-              {/* <button onClick={changeAo}>Dashboard</button> */}
-            </li>
+            <><>
+              <li>
+                <a href="#_Home">Home</a>
+              </li>
+              <li>
+                <a href="#_About">Settings</a>
+              </li>
+
+            </><li>
+                <button onClick={changeAo}>Dashboard</button>
+                {/* <button onClick={changeAo}>Dashboard</button> */}
+              </li></>
+
           )}
         </ul>
       </nav>
@@ -120,9 +121,10 @@ export default function Home(props) {
       <section className="sec_title">
         <h1>
           <span ref={el}></span>
-          <br /> <span>HOUSE</span>
+          <br /> <span>YOUR FUTUR IS NOW</span>
         </h1>
         {isLoggedIn ? (
+
           <button onClick={logout} className="login">
             LOGOUT
           </button>
@@ -159,13 +161,10 @@ export default function Home(props) {
                 required
               />
 
-              {/* <button type="submit" className="signin">
+              <button type="submit" className="signin">
                 SUBMIT
-              </button> */}
+              </button>
 
-              <Button variant="contained" endIcon={<SendIcon />} className="signin">
-                  SUBMIT
-              </Button>
 
               {/* <input type="submit" value="Send" /> */}
             </form>

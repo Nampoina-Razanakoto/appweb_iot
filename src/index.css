@@ -63,7 +63,7 @@ nav img {
   /* width: 40%; */
   width: max-content;
   height: 100%;
-  margin: 0 auto;
+  margin: 0;
 }
 .navbar li {
   position: relative;
@@ -105,7 +105,7 @@ nav img {
 }
 
 section.sec_title {
-  /* border: 2px solid white; */
+  border: 2px solid white;
   width: 50%;
   height: max-content;
   color: white;
@@ -113,8 +113,12 @@ section.sec_title {
   display: flex;
   flex-direction: column;
   gap: 10px;
+<<<<<<< HEAD
   position: relative;
   
+=======
+  position: absolute;
+>>>>>>> d7ab5312a9008d2c4252870e36bad6dde8364b60
 }
 .sec_title h1 {
   font-size: 80px;

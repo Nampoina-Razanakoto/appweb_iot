@@ -46,13 +46,12 @@ export default function Home(props) {
   const handleChange = (e) => {
     setUserName(e.currentTarget.value);
   };
-  const handleMdpChange = (e) => {
-    setMdp(e.currentTarget.value);
-  };
+
   const onSingnin = (e) => {
     e.preventDefault();
     const name = "Lucasrakoto";
     const pswd = "1234";
+    const mdp = "1234";
     if (username === name && mdp === pswd) {
       setIsLoggedIn(true);
       toast.success("Welcome, you are connected !", {
@@ -99,18 +98,22 @@ export default function Home(props) {
       <nav>
         
         <ul className="navbar">
-          <li>
-            <a href="#_Home">Home</a>
-          </li>
-          <li>
-            <a href="#_About">Settings</a>
-          </li>
+
 
           {isLoggedIn && (
-            <li>
-              <button onClick={changeAo}>Dashboard</button>
-              {/* <button onClick={changeAo}>Dashboard</button> */}
-            </li>
+            <><>
+              <li>
+                <a href="#_Home">Home</a>
+              </li>
+              <li>
+                <a href="#_About">Settings</a>
+              </li>
+
+            </><li>
+                <button onClick={changeAo}>Dashboard</button>
+                {/* <button onClick={changeAo}>Dashboard</button> */}
+              </li></>
+
           )}
         </ul>
       </nav>
@@ -119,9 +122,14 @@ export default function Home(props) {
       <section className="sec_title">
         <h1>
           <span ref={el}></span>
+<<<<<<< HEAD
           <br /> <span>YOUR FUTUR IS HERE</span>
+=======
+          <br /> <span>YOUR FUTUR IS NOW</span>
+>>>>>>> d7ab5312a9008d2c4252870e36bad6dde8364b60
         </h1>
         {isLoggedIn ? (
+
           <button onClick={logout} className="login">
             LOGOUT
           </button>

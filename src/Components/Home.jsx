@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/SendIcon';
 
 
 export default function Home(props) {
@@ -99,6 +97,7 @@ export default function Home(props) {
     <div className="home">
       {/* section navbar */}
       <nav>
+        
         <ul className="navbar">
           <li>
             <a href="#_Home">Home</a>
@@ -120,7 +119,7 @@ export default function Home(props) {
       <section className="sec_title">
         <h1>
           <span ref={el}></span>
-          <br /> <span>HOUSE</span>
+          <br /> <span>YOUR FUTUR IS HERE</span>
         </h1>
         {isLoggedIn ? (
           <button onClick={logout} className="login">
@@ -159,13 +158,10 @@ export default function Home(props) {
                 required
               />
 
-              {/* <button type="submit" className="signin">
+              <button type="submit" className="signin">
                 SUBMIT
-              </button> */}
+              </button>
 
-              <Button variant="contained" endIcon={<SendIcon />} className="signin">
-                  SUBMIT
-              </Button>
 
               {/* <input type="submit" value="Send" /> */}
             </form>

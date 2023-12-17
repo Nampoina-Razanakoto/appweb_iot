@@ -26,12 +26,12 @@ function App() {
 
   return (
     <React.Fragment>
-      <Load />
+      {/* <Load /> */}
       {ao ? (
         <div className="container">
           <Home aove={ao} setProps={setprops} />
           <About />
-          <Team />
+          {/* <Team /> */}
         </div>
       ) : (
         <Dashboard aove={ao} setProps={setyprops} />
